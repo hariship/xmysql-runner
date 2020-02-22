@@ -166,18 +166,18 @@ http {
 
 e.g.
 
-    create a docker network ```docker network create local_dev```
-    start a mysql server ```docker run -d --name mysql -p 3306:3306 --network local_dev -e MYSQL_ROOT_PASSWORD=password mysql```
-    start xmysql ```docker run -d --network local_dev --name xmyxql -e DATABASE_NAME=sys -e DATABASE_HOST=mysql -p 3000:80 markuman/xmysql:0.4.2```
-    start nginx on host system with the config above ```sudo nginx -g 'daemon off;' -c /tmp/nginx.conf```
-    profit ```curl http://127.0.0.1/api/host_summary_by_file_io_type/describe```
+    create a docker network `docker network create local_dev`
+    start a mysql server `docker run -d --name mysql -p 3306:3306 --network local_dev -e MYSQL_ROOT_PASSWORD=password mysql`
+    start xmysql `docker run -d --network local_dev --name xmyxql -e DATABASE_NAME=sys -e DATABASE_HOST=mysql -p 3000:80 markuman/xmysql:0.4.2`
+    start nginx on host system with the config above `sudo nginx -g 'daemon off;' -c /tmp/nginx.conf`
+    profit `curl http://127.0.0.1/api/host_summary_by_file_io_type/describe`
 
-When you start your nginx proxy in a docker container too, use as ``proxy_pass`` the ``--name`` value of xmysql. E.g. ``proxy_pass http://xmysql`` (remember, xmysql runs in it's docker container already on port 80).
+When you start your nginx proxy in a docker container too, use as `proxy_pass` the `--name` value of xmysql. E.g. `proxy_pass http://xmysql` (remember, xmysql runs in it's docker container already on port 80).
 Tests : setup on local machine
 
 
 # Tests : setup on local machine
 
-```docker-compose run test```
+`docker-compose run test`
 
 
