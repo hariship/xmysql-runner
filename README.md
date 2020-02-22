@@ -142,8 +142,7 @@ then obviously the connection to your mysql database failed.
 
 This is a config example when you use nginx as reverse proxy
 
-``
-events {
+``events {
    worker_connections 1024;
    
 }
