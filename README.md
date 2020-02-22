@@ -5,12 +5,14 @@
 # xMySQL : One command to generate REST APIs
 
 # Why this ?
+
+Generating REST APIs for a MySQL database which does not follow conventions
+
 <p align="center">
   <img src="./assets/rick_and_morty.gif" alt="xmysql gif"/>
 </p>
 
 
-	**Generating REST APIs for a MySQL database which does not follow conventions**
 
 # Setup and Usage
 
@@ -59,7 +61,6 @@ http://localhost:3000
     * Upload single file
     * Upload multiple files
     * Download file
-* [Docker support](#docker) and [Nginx reverse proxy config](#nginx-reverse-proxy-config-with-docker) :fire::fire::fire: - Thanks to [@markuman](https://github.com/markuman)  
 
 
 ____
@@ -83,22 +84,7 @@ ____
 | GET       | /api/tableName/count             | Count number of rows in a table                        |
 | GET       | /api/tableName/distinct          | Distinct row(s) in table - /api/tableName/distinct?_fields=col1|
 | GET       | /api/tableName/:id/exists        | True or false whether a row exists or not              |
-| GET       | [/api/parentTable/:id/childTable](#relational-tables)             | Get list of child table rows with parent table foreign key   | 
-| GET       | [/api/tableName/aggregate](#aggregate-functions)                  | Aggregate results of numeric column(s)                 |
-| GET       | [/api/tableName/groupby](#group-by-having-as-api)                 | Group by results of column(s)                          |
-| GET 	    | [/api/tableName/ugroupby](#union-of-multiple-group-by-statements) | Multiple group by results using one call               |
-| GET       | [/api/tableName/chart](#chart)                                    | Numeric column distribution based on (min,max,step) or(step array) or (automagic)|
-| GET       | [/api/tableName/autochart](#autochart)                            | Same as Chart but identifies which are numeric column automatically - gift for lazy while prototyping|
-| GET       | [/api/xjoin](#xjoin)                                              | handles join                                        |
-| GET       | [/dynamic](#run-dynamic-queries)                                  | execute dynamic mysql statements with params           |
-| GET       | [/upload](#upload-single-file)                                    | upload single file                                     |
-| GET       | [/uploads](#upload-multiple-files)                                | upload multiple files                                  |
-| GET       | [/download](#download-file)                                       | download a file                                        |
-| GET       | /api/tableName/describe                                           | describe each table for its columns      |
-| GET       | /api/tables                                                       | get all tables in database                           |
-| GET       | [/_health](#health)                                               | gets health of process and mysql -- details query params for more details |
-| GET       | [/_version](#version)                                             | gets version of Xmysql, mysql, node|
-
+| GET       | [/api/parentTable/:id/childTable| Get list of child table rows with parent table foreign key   |
 
 # Debugging xmysql in docker.
 
