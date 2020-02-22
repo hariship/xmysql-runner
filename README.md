@@ -126,16 +126,16 @@ markuman/xmysql:0.4.2
 
 but the response is just
 
-``["http://127.0.0.1:3000/api/tables","http://127.0.0.1:3000/api/xjoin"]``
+```["http://127.0.0.1:3000/api/tables","http://127.0.0.1:3000/api/xjoin"]```
 
 then obviously the connection to your mysql database failed.
 
     attache to the xmysql image
-        ``docker exec -ti xmysql``
+        `docker exec -ti xmysql`
     install mysql cli client
-        ``apk --update --no-cache add mysql-client``
+        `apk --update --no-cache add mysql-client`
     try to access your mysql database
-        ``mysql-client -h mysql_host``
+        `mysql-client -h mysql_host`
     profit from the mysql-client error output and improve the environment variables for mysql
 
 ## Nginx Reverse Proxy Config with Docker
