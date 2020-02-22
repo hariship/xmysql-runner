@@ -6,7 +6,7 @@
 
 ## Why this?
 
-Now you can generate REST APIs for any MySQL database without following any normal conventions
+Now you can generate REST APIs for any MySQL database without following any normal conventions of frameworks
 
 
 <p align="center">
@@ -73,21 +73,21 @@ ____
 |------|---------------------------------------|--------------------------------------------------------- 
 | GET       | /                                | Gets all REST APIs                                     |
 | GET       | /api/tableName                   | Lists rows of table                                    |
-| POST      | /api/tableName                   | Create a new row                                       |
+| POST      | /api/tableName                   | Creates a new row                                       |
 | PUT       | /api/tableName                   | Replaces existing row with new row                     |
-| POST 	    | /api/tableName/bulk              | Create multiple rows - send object array in request body|
+| POST 	    | /api/tableName/bulk              | Creates multiple rows - send object array in request body|
 | GET       | /api/tableName/bulk              | Lists multiple rows - /api/tableName/bulk?_ids=1,2,3   |
 | DELETE    | /api/tableName/bulk              | Deletes multiple rows - /api/tableName/bulk?_ids=1,2,3 |
 | GET       | /api/tableName/:id               | Retrieves a row by primary key                         |
 | PATCH     | /api/tableName/:id               | Updates row element by primary key                     |
-| DELETE    | /api/tableName/:id               | Delete a row by primary key                            |
+| DELETE    | /api/tableName/:id               | Deletes a row by primary key                            |
 | GET       | /api/tableName/findOne           | Works as list but gets single record matching criteria |
-| GET       | /api/tableName/count             | Count number of rows in a table                        |
+| GET       | /api/tableName/count             | Counts number of rows in a table                        |
 | GET       | /api/tableName/distinct          | Distinct row(s) in table - /api/tableName/distinct?_fields=col1|
-| GET       | /api/tableName/:id/exists        | True or false whether a row exists or not              |
-| GET       | [/api/parentTable/:id/childTable| Get list of child table rows with parent table foreign key   |
+| GET       | /api/tableName/:id/exists        | Returns True or false whether a row exists or not              |
+| GET       | [/api/parentTable/:id/childTable | Gets list of child table rows with parent table foreign key   |
 
-# Debugging xmysql in docker.
+# Debugging xmysql in docker
 
 Given you've deployed your xmysql docker container like
 
