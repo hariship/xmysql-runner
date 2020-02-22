@@ -6,7 +6,7 @@
 
 # Why this ?
 
-Generating REST APIs for a MySQL database which does not follow conventions
+	Generating REST APIs for a MySQL database which does not follow conventions
 
 <p align="center">
   <img src="./assets/rick_and_morty.gif" alt="xmysql gif"/>
