@@ -76,8 +76,8 @@ ____
 
 ## API Overview
 
-| HTTP Type | API URL                          | Comments                                               |
-|-----------|----------------------------------|--------------------------------------------------------- 
+| Type | API URL                          | Comments                                               |
+|------------|----------------------------------|--------------------------------------------------------- 
 | GET       | /                                | Gets all REST APIs                                     |
 | GET       | /api/tableName                   | Lists rows of table                                    |
 | POST      | /api/tableName                   | Create a new row                                       |
@@ -130,13 +130,16 @@ but the response is just
 
 then obviously the connection to your mysql database failed.
 
-    attache to the xmysql image
-        `docker exec -ti xmysql`
-    install mysql cli client
-        `apk --update --no-cache add mysql-client`
-    try to access your mysql database
-        `mysql-client -h mysql_host`
-    profit from the mysql-client error output and improve the environment variables for mysql
+     // attach to the xmysql image
+     docker exec -ti xmysql
+     
+     // install mysql cli client
+     apk --update --no-cache add mysql-client
+    
+     // try to access your mysql database 
+     mysql-client -h mysql_host
+    
+profit from the mysql-client error output and improve the environment variables for mysql
 
 ## Nginx Reverse Proxy Config with Docker
 
@@ -164,13 +167,13 @@ http {
 
 ```
 
-e.g.
+**Example**
 
-    create a docker network `docker network create local_dev`
-    start a mysql server `docker run -d --name mysql -p 3306:3306 --network local_dev -e MYSQL_ROOT_PASSWORD=password mysql`
-    start xmysql `docker run -d --network local_dev --name xmyxql -e DATABASE_NAME=sys -e DATABASE_HOST=mysql -p 3000:80 markuman/xmysql:0.4.2`
-    start nginx on host system with the config above `sudo nginx -g 'daemon off;' -c /tmp/nginx.conf`
-    profit `curl http://127.0.0.1/api/host_summary_by_file_io_type/describe`
+- create a docker network `docker network create local_dev`
+- start a mysql server `docker run -d --name mysql -p 3306:3306 --network local_dev -e MYSQL_ROOT_PASSWORD=password mysql`
+- start xmysql `docker run -d --network local_dev --name xmyxql -e DATABASE_NAME=sys -e DATABASE_HOST=mysql -p 3000:80 markuman/xmysql:0.4.2`
+- start nginx on host system with the config above `sudo nginx -g 'daemon off;' -c /tmp/nginx.conf`
+- profit `curl http://127.0.0.1/api/host_summary_by_file_io_type/describe`
 
 When you start your nginx proxy in a docker container too, use as `proxy_pass` the `--name` value of xmysql. E.g. `proxy_pass http://xmysql` (remember, xmysql runs in it's docker container already on port 80).
 Tests : setup on local machine
