@@ -16,7 +16,7 @@ Now you can generate REST APIs for any MySQL database without following any norm
 
 # Setup and Usage
 
-*xmysql requires node >= 7.6.0*
+*xmysql requires **node >= 7.6.0** *
 
 ```
 npm install -g xmysql
