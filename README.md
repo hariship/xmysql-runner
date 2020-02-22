@@ -33,7 +33,7 @@ http://localhost:3000
 
 ---
 
-## Example : Generate REST APIs for any DB
+## Example - Generate REST APIs for any DB
 	
 <p align="center">
   <img src="./assets/xmysql-runner.gif" alt="xmysql gif" width="750"/>
@@ -157,7 +157,7 @@ When you start your nginx proxy in a docker container too, use as `proxy_pass` t
 Tests : setup on local machine
 
 
-# Tests : setup on local machine
+# Tests - Setup on local machine
 
 `docker-compose run test`
 
