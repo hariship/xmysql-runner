@@ -4,19 +4,19 @@
 
 # xMySQL : One command to generate REST APIs
 
-# Why this ?
+## Why this?
 
-	Generating REST APIs for a MySQL database which does not follow conventions
+Now you can generate REST APIs for any MySQL database without following any normal conventions
+
 
 <p align="center">
   <img src="./assets/rick_and_morty.gif" alt="xmysql gif"/>
 </p>
 
 
-
 # Setup and Usage
 
-xmysql requires node >= 7.6.0
+*xmysql requires node >= 7.6.0*
 
 ```
 npm install -g xmysql
@@ -29,10 +29,11 @@ http://localhost:3000
 ```
 <br>
 
-**That's it! Minimalistic**
+*That's it! Simple & minimalistic*
 
+---
 
-# Example : Generate REST APIs for any DB
+## Example : Generate REST APIs for any DB
 	
 <p align="center">
   <img src="./assets/xmysql-runner.gif" alt="xmysql gif" width="750"/>
