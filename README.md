@@ -84,7 +84,7 @@ ____
 | PUT       | /api/tableName                   | Replaces existing row with new row                     |
 | POST :fire:| /api/tableName/bulk             | Create multiple rows - send object array in request body|
 | GET  :fire:| /api/tableName/bulk             | Lists multiple rows - /api/tableName/bulk?_ids=1,2,3   |
-| DELETE :fire:| /api/tableName/bulk           | Deletes multiple rows - /api/tableName/bulk?_ids=1,2,3 |
+| DELETE | /api/tableName/bulk           | Deletes multiple rows - /api/tableName/bulk?_ids=1,2,3 |
 | GET       | /api/tableName/:id               | Retrieves a row by primary key                         |
 | PATCH     | /api/tableName/:id               | Updates row element by primary key                     |
 | DELETE    | /api/tableName/:id               | Delete a row by primary key                            |
@@ -98,9 +98,9 @@ ____
 | GET :fire:| [/api/tableName/ugroupby](#union-of-multiple-group-by-statements) | Multiple group by results using one call               |
 | GET :fire:| [/api/tableName/chart](#chart)                                    | Numeric column distribution based on (min,max,step) or(step array) or (automagic)|
 | GET :fire:| [/api/tableName/autochart](#autochart)                            | Same as Chart but identifies which are numeric column automatically - gift for lazy while prototyping|
-| GET :fire:| [/api/xjoin](#xjoin)                                              | handles join                                        |
+| GET | [/api/xjoin](#xjoin)                                              | handles join                                        |
 | GET :fire:| [/dynamic](#run-dynamic-queries)                                  | execute dynamic mysql statements with params           |
-| GET :fire:| [/upload](#upload-single-file)                                    | upload single file                                     |
+| GET | [/upload](#upload-single-file)                                    | upload single file                                     |
 | GET :fire:| [/uploads](#upload-multiple-files)                                | upload multiple files                                  |
 | GET :fire:| [/download](#download-file)                                       | download a file                                        |
 | GET       | /api/tableName/describe                                           | describe each table for its columns      |
